@@ -1,4 +1,6 @@
-<?php
+<?php 
+
+echo("
         
         <!-- *** FOOTER ***
  _________________________________________________________ -->
@@ -175,5 +177,5 @@
     <script src="js/bootstrap-hover-dropdown.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/front.js"></script>
-</html>
+</html>");
 ?>
