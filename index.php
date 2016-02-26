@@ -102,7 +102,25 @@
                                             <a href="detail.html">
                                                 <img src="img/product1.jpg" alt="" class="img-responsive">
                                                 <div class="text">
-                                                     <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
+                                                     <h3><a href="Produktuebersicht.php"><?php
+														include("data_connect.php");
+															$sql = "SELECT ID, Name, Nachname FROM artists WHERE ID = 1";
+																$result = $conn->query($sql);
+
+																if ($result->num_rows > 0) {
+																	// output data of each row
+																while($row = $result->fetch_assoc()) {
+																	$Name = "Name: ". $row["Name"];
+																	$Nachname = "Nachname: ". $row["Nachname"];
+																	}
+																} else {
+																	echo "0 results";
+																}
+	
+																$conn->close();
+																echo "$Nachname";
+																?>
+													 </a></h3>
                                                      </div>
                                             </a>
                                         </div>
